@@ -45,4 +45,7 @@ app.get("/getData", async (req, res) => {
     res.send(cache.servers);
 });
 
-app.listen(4200);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
